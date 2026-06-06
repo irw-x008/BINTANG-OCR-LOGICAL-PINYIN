@@ -1,0 +1,16 @@
+# Ignore Python builds and temp files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Nuitka outputs
+build/
+dist/
+*.spec
+
+# OCR Outputs & logs
+output/
+logs/
+temp_images/
+history.json
+.env
