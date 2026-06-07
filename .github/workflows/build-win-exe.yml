@@ -32,8 +32,8 @@ jobs:
 
     - name: Compile with Nuitka
       run: |
-        # Otomatis setujui unduhan Dependency Walker tanpa interaksi manual
-        echo Y | python -m nuitka --onefile --windows-disable-console --output-dir=build main.py
+        # Gunakan flag --assume-yes-for-downloads untuk otomatis setujui unduhan Dependency Walker
+        python -m nuitka --onefile --windows-disable-console --assume-yes-for-downloads --output-dir=build main.py
       shell: pwsh
 
     - name: Upload EXE Artifact
