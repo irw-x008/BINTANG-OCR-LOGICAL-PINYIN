@@ -32,7 +32,9 @@ jobs:
 
     - name: Compile with Nuitka
       run: |
-        python -m nuitka --onefile --windows-disable-console --output-dir=build main.py
+        # Otomatis setujui unduhan Dependency Walker tanpa interaksi manual
+        echo Y | python -m nuitka --onefile --windows-disable-console --output-dir=build main.py
+      shell: pwsh
 
     - name: Upload EXE Artifact
       uses: actions/upload-artifact@v4
